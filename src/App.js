@@ -5,7 +5,6 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import AppTopbar from './AppTopbar';
 import AppConfig from './AppConfig';
 import AppRightPanel from './AppRightPanel';
-
 import Dashboard from './components/Dashboard';
 import FormLayoutDemo from './components/FormLayoutDemo';
 import InputDemo from './components/InputDemo';
@@ -33,8 +32,6 @@ import Help from './pages/Help';
 import EmptyPage from './pages/EmptyPage';
 import BlocksDemo from './components/BlocksDemo';
 import Country from './pages/Countries';
-import Bookings from './pages/Bookings';
-import Booking from './pages/Booking';
 
 import TopDestinations from './gassiholidays/tours/topDestinations';
 import TourDestinations from './gassiholidays/tours/destinations';
@@ -82,41 +79,62 @@ const App = (props) => {
             to: '/gassiholidays',
             items: [
                 {
-                    label: 'Dictionaries', icon: 'pi pi-book',
+                    label: 'Dictionaries',
+                    icon: 'pi pi-book',
                     items: [
                         {
-                            label: 'Destinations (Top)', icon: 'pi pi-globe', to: '/topdestinations'
+                            label: 'Destinations (Top)',
+                            icon: 'pi pi-globe',
+                            to: '/topdestinations'
                         },
                         {
-                            label: 'Destinations', icon: 'pi pi-map-marker', to: '/destinations'
+                            label: 'Destinations',
+                            icon: 'pi pi-map-marker',
+                            to: '/destinations'
                         },
                         {
-                            label: 'Attributes', icon: 'pi pi-link', to: '/attributes'
+                            label: 'Attributes',
+                            icon: 'pi pi-link',
+                            to: '/attributes'
                         },
                         {
-                            label: 'Holidays', icon: 'pi pi-calendar', to: '/holidays'
+                            label: 'Holidays',
+                            icon: 'pi pi-calendar',
+                            to: '/holidays'
                         },
                         {
-                            label: 'Transports', icon: 'pi pi-car', to: '/transports'
+                            label: 'Transports',
+                            icon: 'pi pi-car',
+                            to: '/transports'
                         },
                         {
-                            label: 'Facilities', icon: 'pi pi-sort-alt', to: '/facilities'
+                            label: 'Facilities',
+                            icon: 'pi pi-sort-alt',
+                            to: '/facilities'
                         }
                     ]
                 },
                 {
-                    label: 'Tours', icon: 'pi pi-th-large', to: '/tours',
+                    label: 'Tours',
+                    icon: 'pi pi-th-large',
+                    to: '/tours',
                     items: [
                         {
-                            label: 'Tours', icon: 'pi pi-th-large', to: '/tours'
+                            label: 'Tours',
+                            icon: 'pi pi-th-large',
+                            to: '/tours'
                         },
                         {
-                            label: 'Main page slide', icon: 'pi pi-code', to: '/mainpageslide'
+                            label: 'Main page slide',
+                            icon: 'pi pi-code',
+                            to: '/mainpageslide'
                         }
                     ]
                 },
                 {
-                    label: 'Articles', icon: 'pi pi-clone', to: '/articles'
+                    label: 'Articles',
+                    icon: 'pi pi-clone',
+                    to: '/articles'
                 }
             ]
         }
@@ -431,8 +449,6 @@ const App = (props) => {
                         <Route path="/tours" element={<Tours />} />
                         <Route path="/mainpageslide" element={<MainSlideTours />} />
                         <Route path="/articles" element={<Articles />} />
-                        <Route path="/bookings" element={<Bookings />} />
-                        <Route path="/booking" element={<Booking code={"RTC3423"} />} />
                         <Route path="/dictionaries/countries" element={<Country />} />
                         <Route path="/start/documentation" element={<Documentation />} />
                         <Route path="/uikit/formlayout" element={<FormLayoutDemo />} />
