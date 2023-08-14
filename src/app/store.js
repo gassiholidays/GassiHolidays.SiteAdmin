@@ -1,13 +1,15 @@
-import { configureStore } from '@reduxjs/toolkit'
+import { configureStore } from '@reduxjs/toolkit';
 import { useDispatch as useAppDispatch, useSelector as useAppSelector } from 'react-redux';
 
-import toursReducer from '../app/tours'
+import toursReducer from '../app/tours';
+import pricesReducer from '../app/prices';
 
 const store = configureStore({
-  reducer: {
-    toursReducer
-  },
-})
+    reducer: {
+        toursReducer,
+        pricesReducer
+    }
+});
 
 const { dispatch } = store;
 

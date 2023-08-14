@@ -7,7 +7,6 @@ import axios from 'axios';
 // import { dispatch } from '../index';
 import { BASE_API_URL } from '../gassiholidays/constants/settings';
 
-
 // ----------------------------------------------------------------------
 
 const initialState = {
@@ -37,7 +36,6 @@ const slice = createSlice({
             state.state = { state: null, message: null };
         },
 
-
         // GET ALL TOURS
         getToursSuccess(state, action) {
             state.state = { success: true, message: null };
@@ -51,7 +49,7 @@ const slice = createSlice({
 
         editTourSuccess(state, action) {
             state.state = { success: true, message: null };
-            var index = state.tours.findIndex(x => x.id == action.payload.id);
+            var index = state.tours.findIndex((x) => x.id == action.payload.id);
             state.tours[index] = action.payload;
             console.log('success');
             console.log(action.payload.id);
@@ -252,7 +250,7 @@ export function updateTourMainImage(value) {
     return async () => {
         try {
             dispatch(slice.actions.clearState());
-            console.log("update tour main image")
+            console.log('update tour main image');
             const response = await axios({
                 method: 'put',
                 url: `${BASE_API_URL}/api/tours/${value.tourId}/image`,
@@ -303,12 +301,11 @@ export function updateTourGalleryPhotos(galleryPhotos) {
     };
 }
 
-export function saveTourPhotosGallery(value)
-{
+export function saveTourPhotosGallery(value) {
     return async () => {
         try {
             dispatch(slice.actions.clearState());
-            console.log("update photo gallery images")
+            console.log('update photo gallery images');
             const response = await axios({
                 method: 'put',
                 url: `${BASE_API_URL}/api/tours/${value.tourId}/gallery/images`,

@@ -6,32 +6,6 @@ import AppTopbar from './AppTopbar';
 import AppConfig from './AppConfig';
 import AppRightPanel from './AppRightPanel';
 import Dashboard from './components/Dashboard';
-import FormLayoutDemo from './components/FormLayoutDemo';
-import InputDemo from './components/InputDemo';
-import FloatLabelDemo from './components/FloatLabelDemo';
-import InvalidStateDemo from './components/InvalidStateDemo';
-import ButtonDemo from './components/ButtonDemo';
-import TableDemo from './components/TableDemo';
-import ListDemo from './components/ListDemo';
-import TreeDemo from './components/TreeDemo';
-import PanelDemo from './components/PanelDemo';
-import OverlayDemo from './components/OverlayDemo';
-import MediaDemo from './components/MediaDemo';
-import MenuDemo from './components/MenuDemo';
-import MessagesDemo from './components/MessagesDemo';
-import FileDemo from './components/FileDemo';
-import ChartDemo from './components/ChartDemo';
-import MiscDemo from './components/MiscDemo';
-import Documentation from './components/Documentation';
-import IconsDemo from './utilities/IconsDemo';
-import CrudDemo from './pages/CrudDemo';
-import CalendarDemo from './pages/CalendarDemo';
-import TimelineDemo from './pages/TimelineDemo';
-import Invoice from './pages/Invoice';
-import Help from './pages/Help';
-import EmptyPage from './pages/EmptyPage';
-import BlocksDemo from './components/BlocksDemo';
-import Country from './pages/Countries';
 
 import TopDestinations from './gassiholidays/tours/topDestinations';
 import TourDestinations from './gassiholidays/tours/destinations';
@@ -42,6 +16,7 @@ import TourFacilities from './gassiholidays/tours/facilities';
 import Tours from './gassiholidays/tours/tours';
 import Articles from './gassiholidays/tours/articles';
 import MainSlideTours from './gassiholidays/tours/MainSlideTours';
+import Prices from './gassiholidays/prices/prices';
 
 import PrimeReact from 'primereact/api';
 import { Tooltip } from 'primereact/tooltip';
@@ -135,6 +110,11 @@ const App = (props) => {
                     label: 'Articles',
                     icon: 'pi pi-clone',
                     to: '/articles'
+                },
+                {
+                    label: 'Prices',
+                    icon: 'pi pi-clone',
+                    to: '/prices'
                 }
             ]
         }
@@ -449,32 +429,7 @@ const App = (props) => {
                         <Route path="/tours" element={<Tours />} />
                         <Route path="/mainpageslide" element={<MainSlideTours />} />
                         <Route path="/articles" element={<Articles />} />
-                        <Route path="/dictionaries/countries" element={<Country />} />
-                        <Route path="/start/documentation" element={<Documentation />} />
-                        <Route path="/uikit/formlayout" element={<FormLayoutDemo />} />
-                        <Route path="/uikit/floatlabel" element={<FloatLabelDemo />} />
-                        <Route path="/uikit/input" element={<InputDemo />} />
-                        <Route path="/uikit/invalidstate" element={<InvalidStateDemo />} />
-                        <Route path="/uikit/button" element={<ButtonDemo />} />
-                        <Route path="/uikit/table" element={<TableDemo />} />
-                        <Route path="/uikit/list" element={<ListDemo />} />
-                        <Route path="/uikit/tree" element={<TreeDemo />} />
-                        <Route path="/uikit/panel" element={<PanelDemo />} />
-                        <Route path="/uikit/overlay" element={<OverlayDemo />} />
-                        <Route path="/uikit/menu/*" element={<MenuDemo />} />
-                        <Route path="/uikit/message" element={<MessagesDemo />} />
-                        <Route path="/uikit/media" element={<MediaDemo />} />
-                        <Route path="/uikit/file" element={<FileDemo />} />
-                        <Route path="/uikit/chart" element={<ChartDemo colorMode={colorScheme} location={location} />} />
-                        <Route path="/uikit/misc" element={<MiscDemo />} />
-                        <Route path="/utilities/icons" element={<IconsDemo />} />
-                        <Route path="/pages/crud" element={<CrudDemo />} />
-                        <Route path="/pages/calendar" element={<CalendarDemo />} />
-                        <Route path="/pages/help" element={<Help colorScheme={colorScheme} />} location={location} />
-                        <Route path="/pages/invoice" element={<Invoice />} />
-                        <Route path="/pages/empty" element={<EmptyPage />} />
-                        <Route path="/pages/timeline" element={<TimelineDemo />} />
-                        <Route path="/uiblocks/blocks" element={<BlocksDemo />} />
+                        <Route path="/prices" element={<Prices />} />
                     </Routes>
                 </div>
 
